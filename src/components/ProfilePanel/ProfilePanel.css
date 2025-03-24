@@ -1,0 +1,166 @@
+.profile-panel {
+  display: block;
+  position: fixed;
+  align-self: flex-start;
+  top: 24px;
+  left: 0;
+  bottom: 0;
+  width: 18vw;
+  height: fit-content;
+  padding: 10px;
+}
+
+.panel__personal {
+  background-image: url("../../assets/panel_background.png");
+  border: 3px #212121 solid;
+  border-radius: 8px;
+  height: fit-content;
+  max-width: 15vw;
+}
+
+.panel__identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.panel__identity-image {
+  background-image: url("../../assets/resumephoto.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-position: center;
+  border: 3px solid #212121;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  align-self: center;
+  width: 100%;
+  max-width: 100px;
+  height: 150px;
+  max-height: 150px;
+}
+
+.panel__identity-name {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.panel__stats {
+  background-color: rgba(243, 221, 149, 0.6);
+  border: 2px #212121 solid;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 12px;
+  grid: 100%;
+  gap: 20px;
+}
+
+.panel__stat-age {
+  width: fit-content;
+  justify-content: left;
+}
+
+.panel__stat-gender {
+  width: fit-content;
+  justify-content: left;
+}
+
+.panel__stat-location {
+  width: 100%;
+  text-align: left;
+}
+
+.panel__email-button {
+  border: 2px black solid;
+  border-radius: 8px;
+}
+
+.panel__contact {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panel__contact-item {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.panel__contact-info {
+  position: absolute;
+  background-color: white;
+  border: 2px black solid;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .panel__personal {
+    padding: 0;
+    margin: 0;
+    min-width: 100px;
+    width: 150px;
+  }
+  .panel__identity-image {
+    max-width: 60px;
+    height: 75px;
+    max-height: 75px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-panel {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .panel__personal {
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    width: fit-content;
+    max-width: 100%;
+    align-items: center;
+  }
+  .panel__identity {
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+  .panel__identity-image {
+    margin: 0;
+    width: 50px;
+    height: 80px;
+  }
+  .panel__stats {
+    justify-content: center;
+    margin: 0;
+  }
+  .panel__stat-gender,
+  .panel__stat-location {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .panel__identity {
+    flex-direction: column;
+  }
+}
