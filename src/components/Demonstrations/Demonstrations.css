@@ -1,0 +1,83 @@
+.demonstrations__title {
+  margin: 20px 0;
+  background-image: url("../../assets/glowing.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(6, 126, 255);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  outline: auto;
+  outline-color: red;
+  border-radius: 8px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: solid;
+}
+
+.demonstrations__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.demonstrations__item {
+  background-image: url("../../assets/whiteblue.avif");
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border: 2px black solid;
+  border-radius: 16px;
+}
+
+.demonstrations__button {
+  background-color: rgb(206, 159, 194);
+  width: 220px;
+  max-width: 220px;
+  min-width: 220px;
+  max-height: fit-content;
+  min-height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.demonstrations__span-tag {
+  padding: 0 5px;
+  margin: 0;
+  color: rgb(210, 198, 30);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-weight: 700;
+  background-color: grey;
+  border-radius: 8px;
+}
+
+.demonstration__description {
+  margin: 0px;
+  padding: 10px;
+  width: fit-content;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .demonstrations__title {
+    font-size: 20px;
+  }
+
+  .demonstrations__item {
+    flex-direction: column;
+  }
+
+  .demonstrations__button,
+  .demonstration__description {
+    font-size: 18px;
+  }
+}

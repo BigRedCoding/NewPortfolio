@@ -41,20 +41,3 @@ export function validateUrl(urlText) {
 
   return urlValidation;
 }
-
-export function validateWeather(weatherType) {
-  let weatherValidation = {
-    isValid: false,
-    message: "Weather type must be selected.",
-  };
-  if (
-    weatherType === "hot" ||
-    weatherType === "warm" ||
-    weatherType === "cold"
-  ) {
-    weatherValidation.isValid = true;
-    weatherValidation.message = "";
-  }
-
-  return weatherValidation;
-}

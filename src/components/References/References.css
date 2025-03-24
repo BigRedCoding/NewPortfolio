@@ -1,0 +1,132 @@
+.references {
+  background-image: url("../../assets/marble.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 4px solid black;
+  min-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.reference__header {
+  position: relative;
+  min-width: 100%;
+  display: flex;
+}
+
+.reference__text {
+  color: rgb(125, 125, 255);
+  font-size: 60px;
+  text-align: center;
+
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 1), 1px -1px 0 rgba(0, 0, 0, 1),
+    -1px 1px 0 rgba(0, 0, 0, 1), 1px 1px 0 rgba(0, 0, 0, 1);
+}
+
+.reference__title {
+  margin: 20px 0;
+  background-image: url("../../assets/glowing.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(6, 126, 255);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  outline: auto;
+  outline-color: red;
+  border-radius: 8px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.reference__button {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  align-self: center;
+  border-radius: 8px;
+}
+
+.references__list {
+  background-image: url("../../assets/fabric.jpg");
+  border: 5px solid black;
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  list-style: none;
+  justify-content: center;
+}
+
+.references__list-item {
+  background-color: rgb(151, 205, 167);
+  margin: 0;
+  padding: 5px;
+  border: 2px black solid;
+  display: flex;
+  width: 280px;
+}
+
+.reference__detail {
+  margin: 0px;
+  padding: 5px 0;
+  width: fit-content;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.detail__name {
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .reference__header {
+    flex-direction: column;
+  }
+
+  .reference__title {
+    font-size: 20px;
+  }
+  .reference__button {
+    font-size: 12px;
+  }
+  .references__list-item {
+    width: 200px;
+  }
+  .reference__detail {
+    font-size: 12px;
+  }
+  .detail__name {
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: auto;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .reference__text {
+    font-size: 48px;
+  }
+  .references__list-item {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .reference__text {
+    font-size: 32px;
+  }
+  .references__list {
+    width: fit-content;
+  }
+}

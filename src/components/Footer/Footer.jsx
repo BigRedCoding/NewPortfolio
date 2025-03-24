@@ -1,13 +1,14 @@
 import "./Footer.css";
-import "./Footer.css";
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__detail">Developed by Brandon Dooley</p>
-      <p className="footer__detail">{new Date().getFullYear()}</p>
+      <div className="footer__div">
+        <div className="footer__text-div">
+          <p className="footer__copyright">&copy; 2025 Brandon Dooley</p>
+          <p className="footer__update">Updated: March 22nd, 2025</p>
+        </div>
+      </div>
     </footer>
   );
 }
-
-export default Footer;

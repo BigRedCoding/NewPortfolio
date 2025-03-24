@@ -1,0 +1,189 @@
+.work {
+  background-image: url("../../assets/skywater.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 16px;
+}
+
+.work__title {
+  background-image: url("../../assets/glowing.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(6, 126, 255);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  outline: auto;
+  outline-color: red;
+  border-radius: 8px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+}
+.work__employer-list {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0;
+}
+
+.work__list-item {
+  padding: 5px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  gap: 0;
+}
+
+.work__dates {
+  margin: 5px;
+  padding: 5px;
+  background-color: beige;
+  border: 3px black solid;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  width: fit-content;
+  text-align: center;
+}
+
+.work__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.work__cdawindow-button {
+  background-image: url("../../assets/cdawindow.png");
+  height: 100px;
+  width: 200px;
+  background-size: cover;
+}
+
+.work__mcdonalds-button {
+  background-image: url("../../assets/mcdonalds.png");
+  background-color: rgba(0, 0, 0, 0);
+  height: 100px;
+  width: 100px;
+  background-size: contain;
+  border-style: none;
+  background-repeat: no-repeat;
+}
+
+.work__staples-button {
+  background-image: url("../../assets/staples.png");
+  background-color: rgba(0, 0, 0, 0);
+  height: 80px;
+  width: 250px;
+  background-size: contain;
+  border-style: none;
+  background-repeat: no-repeat;
+}
+
+.work__super1foods-button {
+  background-image: url("../../assets/super1foods.png");
+  background-color: rgba(0, 0, 0, 0);
+  height: 150px;
+  width: 150px;
+  background-size: contain;
+  border-style: none;
+  background-repeat: no-repeat;
+}
+
+.work__details {
+  background-image: url("../../assets/beige1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px black solid;
+  border-radius: 12px;
+  width: 100%;
+  height: fit-content;
+  font-size: 20px;
+}
+
+.work__details-title {
+  padding: 5px;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.work__details-cdalist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgba(4, 255, 0, 0.2);
+  font-weight: 500;
+}
+
+.work__details-cdawindow {
+  padding: 0 20px;
+}
+
+.work__details-cdalist-item {
+  padding: 0px;
+  margin: 0px;
+  width: 400px;
+}
+
+.work__details-mcdonalds {
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+}
+.work__details-staples {
+  padding: 0 20px;
+}
+
+.work__details-super1foods {
+  padding: 0 20px;
+}
+.work__details-paragraph {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgba(4, 255, 0, 0.2);
+  font-weight: 500;
+}
+
+.work___navigation {
+  padding: 10px 0px 20px 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .work__title {
+    font-size: 20px;
+  }
+
+  .work__employer-list {
+    justify-content: space-between;
+  }
+
+  .work__dates {
+    font-size: 12px;
+  }
+  .work__details-paragraph {
+    font-size: 12px;
+  }
+  .work__details-cdalist {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .work__employer-list {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .work__details {
+    width: 90vw;
+  }
+}

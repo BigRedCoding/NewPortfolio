@@ -1,0 +1,51 @@
+.introduction {
+  background-image: url("../../assets/tuscany.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.introduction__title {
+  background-image: url("../../assets/glowing.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(6, 126, 255);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  outline: auto;
+  outline-color: red;
+  border-radius: 8px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.introduction__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 20px;
+}
+
+.introduction__text {
+  margin: 0;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgba(226, 207, 187, 0.4);
+  color: rgb(145, 255, 0);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  width: fit-content;
+  text-wrap: auto;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .introduction__title {
+    font-size: 20px;
+  }
+
+  .introduction__text {
+    font-size: 12px;
+  }
+}
