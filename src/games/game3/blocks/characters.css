@@ -1,0 +1,13 @@
+.enemyClass {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.characterClass {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
