@@ -1,41 +1,62 @@
 .main {
   width: 100%;
+}
+.cards {
   display: flex;
-  gap: 5px;
-  overflow: hidden;
-  height: 70vh;
-  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.sections-container {
-  flex-grow: 1;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border: 4px solid black;
-  border-radius: 16px;
+.cards__text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24.8px;
+  width: 100%;
 }
 
-.sections-container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, 328px);
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  list-style-type: none;
 }
 
-.sections-container::-webkit-scrollbar-track {
-  background: transparent;
+.main__randomize-button {
+  visibility: collapse;
+  width: 0;
+  height: 0;
 }
 
-.sections-container::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0, 0.7);
-  border-radius: 10px;
+@media screen and (max-width: 1111.5px) {
+  .cards__list {
+    justify-content: center;
+  }
 }
-
-.sections-container::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 115, 0);
-  border: 2px black solid;
+@media screen and (max-width: 629px) {
+  .cards__list {
+    column-gap: 15px;
+    row-gap: 16px;
+  }
+  .main__randomize-button {
+    background-color: black;
+    margin: 20px 0 0;
+    visibility: visible;
+    width: 100%;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .main__randomize-text {
+    color: white;
+  }
 }
-
-@media screen and (max-width: 667px) {
-  .main {
-    flex-direction: column;
+@media screen and (max-width: 395px) {
+  .cards__list {
+    justify-content: flex-start;
   }
 }

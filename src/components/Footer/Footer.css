@@ -1,74 +1,19 @@
 .footer {
-  position: relative;
-  width: 100%;
-  padding: 0;
+  margin: 85px 2px 0 0px;
   display: flex;
-  justify-content: center;
-}
-
-.footer__div {
-  width: 100%;
-  position: relative;
-  align-items: center;
-  padding: 5px;
-  background-image: url("../../assets/marble.avif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-around;
-  border: 4px solid black;
-  border-radius: 16px;
-}
-
-.footer__text-div {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.footer__links-div {
-  padding: 10px;
-  border-radius: 16px;
-  gap: 20px;
-}
-
-.footer__copyright {
-  background-color: aliceblue;
-  width: fit-content;
-  font-size: 20px;
-  font-weight: 600;
-  order: 4px solid black;
-  border-radius: 8px;
-  padding: 5px;
-  margin: 0px;
-}
-
-.footer__update {
-  background-color: aliceblue;
-  width: fit-content;
+  justify-content: space-between;
+  font-weight: 500;
   font-size: 16px;
-  order: 4px solid black;
-  border-radius: 8px;
-  padding: 5px;
-  margin: 0px;
 }
 
-@media screen and (max-width: 768px) {
-  .footer__div {
-    padding: 20px;
-    justify-content: space-around;
-  }
-  .footer__copyright {
-    font-size: 12px;
-  }
-  .footer__update {
-    font-size: 10px;
-  }
+.footer__detail {
+  margin: 0;
+  padding: 0;
 }
 
-@media screen and (max-width: 425px) {
-  .footer__div {
-    padding: 10px;
-    justify-content: space-between;
+@media screen and (max-width: 627px) {
+  .footer {
+    margin: 85px 0 0;
+    padding-bottom: 4px;
   }
 }

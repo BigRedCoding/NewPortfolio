@@ -1,73 +1,160 @@
-import "./Header.css";
-import Self from "../../assets/resumephoto.png";
-import { contactinfo } from "../../utils/constants";
 import { useContext, useState, useEffect } from "react";
-import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-export default function Header({ handleCaptcha }) {
-  const { captchaSolved } = useContext(CurrentUserContext);
+import "./Header.css";
+import logoHeader from "../../assets/logo.svg";
 
-  const [contactInfoVisible, setContactVisibleInfo] = useState(false);
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch.jsx";
+import { Link } from "react-router-dom";
 
-  const setCaptchaDetails = () => {
-    if (captchaSolved === true) {
-      setContactVisibleInfo(true);
-    }
+import CurrentUserContext from "../../contexts/CurrentUserContext.js";
+
+function Header({ onAddClick, onLoginClick, onRegistrationClick }) {
+  const [isContainerVisible, setIsContainerVisible] = useState(false);
+
+  const currentDate = new Date().toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+  });
+
+  const { isLoggedIn, userData, weatherData } = useContext(CurrentUserContext);
+
+  const userNameFirstLetter = userData?.userName?.[0].toUpperCase();
+  const hasAvatar = userData?.userAvatar;
+
+  const setContainerVisibility = () => {
+    setIsContainerVisible(!isContainerVisible);
   };
 
   useEffect(() => {
-    setCaptchaDetails();
-  }, [captchaSolved]);
+    const handleClickOutside = (e) => {
+      if (e.target.closest(".header__add-clothes-button")) {
+        setIsContainerVisible(false);
+      } else if (!e.target.closest(".header__user-container")) {
+        setIsContainerVisible(false);
+      }
+    };
 
-  useEffect(() => {
-    setCaptchaDetails();
-  }, []);
+    if (isContainerVisible) {
+      setTimeout(() => {
+        document.addEventListener("click", handleClickOutside);
+      }, 0.5);
+
+      return () => {
+        document.removeEventListener("click", handleClickOutside);
+      };
+    }
+  }, [isContainerVisible]);
 
   return (
     <div className="header">
-      <div className="header__container">
-        <img src={Self} alt="Photo of self" className="header__image" />
-        <div className="header__text-container">
-          <p className="header__title page__default-remove ">
-            BRANDON R DOOLEY
-          </p>
-          <div className="header__details-container">
-            <p className="header__details page__default-remove ">
-              35 years old
-            </p>
-            <p className="header__details page__default-remove ">Post Falls</p>
-          </div>
-          <button
-            type="button"
-            onClick={handleCaptcha}
-            className={`header__email-button ${
-              captchaSolved === true ? "hide" : ""
-            }`}
-          >
-            Contact info
-          </button>
-          <ul
-            className={`header__contact-info ${
-              !contactInfoVisible && "hide"
-            } page__default-remove`}
-          >
-            {contactinfo.map((info, index) => (
-              <li key={index} className="header__contact-item">
-                <strong>{info.label}:</strong> {info.value}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="header__container2 page__default-remove">
-        <h1 className="header__profession-title page__default-remove">
-          𝔽𝕦𝕝𝕝-𝕊𝕥𝕒𝕔𝕜 𝕊𝕠𝕗𝕥𝕨𝕒𝕣𝕖 𝔼𝕟𝕘𝕚𝕟𝕖𝕖𝕣
-        </h1>
-        <p className="header__profession-languages page__default-remove">
-          HTML | CSS | Javascript | React.js | Node.js | Express.js | MongoDB |
-          Nginx | Certbot
+      <div className="header__logo-container">
+        <Link className="header__link" to="/">
+          <img src={logoHeader} alt="wtwr° Logo" className="header__logo" />
+        </Link>
+        <p className="header__date-And-Location">
+          {currentDate}, {weatherData.city}
         </p>
+      </div>
+      <div
+        className={`header__user-container header__user-container_mod ${
+          isContainerVisible ? "container__visible-mod" : ""
+        }`}
+      >
+        <ToggleSwitch />
+        {isLoggedIn ? (
+          <>
+            <button
+              onClick={onAddClick}
+              type="button"
+              className="header__add-clothes-button"
+            >
+              + Add Clothes
+            </button>
+            <Link to="/profile" className="header__link">
+              <div className="header__user-info">
+                <p className="header__user-name">{userData?.userName || ""}</p>
+                {hasAvatar ? (
+                  <>
+                    <img
+                      src={userData.userAvatar}
+                      alt="avatar image"
+                      className="header__user-avatar"
+                    />
+                  </>
+                ) : (
+                  <div className="avatar_image avatar__alternate">
+                    <p className="avatar__alternate-text">
+                      {userNameFirstLetter}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </Link>
+          </>
+        ) : (
+          <div className="header__login-and-registration">
+            <button
+              onClick={onRegistrationClick}
+              type="button"
+              className="header__registration-button"
+            >
+              Sign Up
+            </button>
+            <button
+              onClick={onLoginClick}
+              type="button"
+              className="header__login-button"
+            >
+              Log In
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="header__mobile-icon">
+        {isLoggedIn ? (
+          <>
+            <div className="header__user-info">
+              {hasAvatar ? (
+                <img
+                  src={userData.userAvatar}
+                  alt="avatar image"
+                  className="header__user-avatar"
+                  onClick={setContainerVisibility}
+                />
+              ) : (
+                <button
+                  className="avatar_image avatar__alternate"
+                  onClick={setContainerVisibility}
+                  aria-label="Toggle container visibility"
+                >
+                  <p className="avatar__alternate-text">
+                    {userNameFirstLetter}
+                  </p>
+                </button>
+              )}
+            </div>
+          </>
+        ) : (
+          <div className="header__log-reg-mobile">
+            <button
+              onClick={onRegistrationClick}
+              type="button"
+              className="header__registration-button"
+            >
+              Sign Up
+            </button>
+            <button
+              onClick={onLoginClick}
+              type="button"
+              className="header__login-button"
+            >
+              Log In
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
 }
+
+export default Header;
