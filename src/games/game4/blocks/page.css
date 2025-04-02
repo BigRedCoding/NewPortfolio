@@ -1,0 +1,24 @@
+.hidden {
+  display: none;
+}
+.error {
+  font-size: 22px;
+  color: red;
+}
+.success {
+  font-size: 32px;
+  color: green;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+.remove_defaults {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

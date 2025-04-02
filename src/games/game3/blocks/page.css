@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.main__game-container {
+  display: flex;
+  width: fit-content;
+}
+
+.main__div {
+  width: 900px;
+  height: 900px;
+  border: 2px solid black;
+  background-image: "";
+  background-position-x: 0;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+  background-color: black;
+  overflow: hidden;
+}
+.main__map-canvas {
+  background-color: lightgray;
+  z-index: 10;
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border: 2px solid black;
+  background-image: "";
+  background-position-x: 0;
+  background-position-y: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.player__div {
+  position: fixed;
+  left: 400px;
+  top: 400px;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+}

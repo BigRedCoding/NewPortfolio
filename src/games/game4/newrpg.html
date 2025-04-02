@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a custom website designed to act as my portfolio."
+    />
+    <meta name="author" content="Brandon Dooley" />
+    <meta
+      name="keywords"
+      content="Brandon, Dooley, Brandon Dooley, Big Red, Software Engineer, Software, Engineer"
+    />
+    <title>Demo RPG</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="main__login-container">
+          <h1 class="main__banner-text remove_defaults">
+            OBOLODO - prema
+          </h1>
+        <div class="main__login-div">
+            <ul class="main__characters-list remove_defaults"></ul>
+          <div id="createCharacterDiv" class="main__create-div hidden">
+            <label class="main__character-label" for="characterName">Enter desired character name:</label>
+            <input type="text" id="characterName" />
+            <button id="createCharacterBtn">Create Character</button>
+            <p id="errorMessage" class="error remove_defaults hidden">
+              Character name must be at least 2 characters long.
+            </p>
+          </div>
+          <div class="main__create-div">   
+            <p id="successMessage" class="success remove_defaults hidden">
+              Character created successfully!
+            </p>
+            <button id="selectCharacterBtn" class="hidden">Use Character</button>
+            <button id="deleteCharacterBtn" class="hidden">Delete Character</button>
+            <button id="createNewCharacterBtn" class="hidden">
+             Create Character
+            </button>
+            <p id="storageMessage" class="success remove_defaults hidden">
+              Character file found!
+            </p>
+            <p id="selectionErrorMessage" class="error remove_defaults hidden">
+              Please select a character.
+            </p>
+            <p id="characterSelectedMessage" class="success remove_defaults hidden">
+              Character selected!
+            </p>
+            <p id="characterDeletedMessage" class="error remove_defaults hidden">
+              Character deleted!
+            </p>
+          </div>     
+      </div>
+    </div>        
+    <div class="main__game-container" id="game-container">
+        <div class="main__div">
+          <canvas class="main__map-canvas" id="map-canvas"></canvas>
+        </div>
+        <div class="panel" id="panel">
+          <div class="panel__stats">
+            <div class="panel__bar-container">
+              <div class="panel__bar panel__health-bar" id="healthBar">
+                <span class="panel__bar-label" id="healthLabel"
+                  >Health: 100%</span
+                >
+              </div>
+            </div>
+            <div class="panel__bar-container">
+              <div class="panel__bar panel__mana-bar" id="manaBar">
+                <span class="panel__bar-label" id="manaLabel">Mana: 100%</span>
+              </div>
+            </div>
+            <div class="panel__bar-container">
+              <ul class="panel__bar panel__xp-bar" id="xpBar">
+                <li>
+                  <span class="panel__bar-label" id="xpLabel">XP: 0%</span>
+                </li>
+                <li><p class="display__level" id="display-level"></p></li>
+              </ul>
+            </div>
+            <div class="panel__statsgold">
+              <button class="panel__gold-stats-btn"></button>
+              <!--Add these classes to the panel.css file-->
+              <p class="panel__statgold-gold"></p>
+            </div>
+          </div>
+          <div class="panel__mini-map"></div>
+          <div class="panel__options">
+            <button class="panel__options-btn" id="option1"></button>
+            <button class="panel__options-btn" id="option2"></button>
+            <button class="panel__options-btn" id="option3"></button>
+            <button class="panel__options-btn" id="option4"></button>
+            <button class="panel__options-btn" id="option5"></button>
+          </div>
+          <div class="panel__inventory"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./scripts/index.js"></script>
+</html>

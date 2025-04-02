@@ -1,0 +1,163 @@
+.main {
+  background-image: url("../images/backgroundgif3.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: auto;
+    height: 100vh;
+  }
+  .main__login-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 8px 4px 0px #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px black solid;
+    flex-direction: column;
+    width: 1440px;
+    max-width: 1440px;
+    height:fit-content;
+  }
+
+  .main__banner-text{
+    text-align: center;
+    font-size: 48px;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+
+  .main__login-div{
+    width: 1100px;
+    max-width: 1100px;
+    height: fit-content;
+    box-shadow: 0px 8px 4px 4px #000000;
+    border-radius: 10px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main__create-div,
+  .main__characters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .main__character-label{
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .main__characters-list{
+    border: 2px black solid;
+    border-radius: 8px;
+    box-shadow: 0px 8px 4px 4px #000000c9;
+    width: 1060px;
+    max-width: 1060px;
+    background-color: #fafafa;
+    height: 600px;
+    overflow:visible;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .main__list-item {
+    background-color: #d6d6d6;
+    box-shadow: 0px 8px 4px 4px #000000c9;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px black solid;
+    transition: transform 0.3s ease;
+  }
+  
+  .main__character-label {
+    font-size: 48px;
+  }
+  
+  .main__character-input {
+    font-size: 32px;
+  }
+  
+  .main__character-check-button,
+  .main__character-create-button {
+    width: fit-content;
+    height: 50px;
+    font-size: 36px;
+  }
+  
+  .main__game-container {
+    display: flex;
+    width: fit-content;
+  }
+  
+  .main__div {
+    width: 900px;
+    height: 900px;
+    border: 2px solid black;
+    background-image: "";
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    background-color: black;
+    overflow: hidden;
+  }
+  .main__map-canvas {
+    background-color: lightgray;
+    z-index: 10;
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    border: 2px solid black;
+    background-image: "";
+    background-position-x: 0;
+    background-position-y: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  .player__div {
+    position: fixed;
+    left: 400px;
+    top: 400px;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+  }
+  .main__list-item:hover {
+    transform: scale(1.05);
+  }
+
+  .main__banner-text:hover{
+    cursor:default;
+    transform: scale(1.1);
+  }
+
+  button {
+    transition: transform 0.2s ease;
+    padding: 10px;
+    background-color: #fafafa;
+    box-shadow: 0px 6px 4px 0px #000000c9;
+    border-radius: 10px;
+  }
+  button:hover {
+    transform: scale(1.05);
+    font-size: 18px;
+  }
+  p{
+    cursor:default;
+  }
+
+  input{
+    padding: 10px;
+    font-size: 20px;
+  }
