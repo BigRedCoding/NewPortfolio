@@ -1,4 +1,4 @@
-import { variables } from "./utils/constants";
+import {variables} from "../scripts/utils/constants.js";
 
 const canvas = document.getElementById("map-canvas");
 const ctx = canvas.getContext("2d");
